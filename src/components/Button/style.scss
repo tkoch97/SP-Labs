@@ -1,0 +1,17 @@
+.buttonStructure {
+  background: #5DFED6;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1.2rem 3.2rem;
+  width: 100%;
+  text-transform: uppercase;
+  color: #343434;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+  letter-spacing: 0.14rem;
+  
+  &:hover {
+    background: #45E6BF;
+  }
+}
