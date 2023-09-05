@@ -1,8 +1,24 @@
-# React + Vite
+# SP Labs 🧪⚖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Alt text](image.png)
 
-Currently, two official plugins are available:
+## 📁 Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+</p>
+This project consists of a landing-page created for the technical challenge of Sem Processo company.
+
+#
+
+## 🔧 Tecnologies
+
+<img align="center" alt="tkoch-reactjs" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /> React.js 
+<img align="center" alt="tkoch-node" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /> Node.js
+<img align="center" alt="tkoch-react" height="30" width="40" src="https://vitejs.dev/logo.svg" /> Vite.js
+<img align="center" alt="tkoch-sass" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" /> SASS
+
+# 
+
+## 💡 Access - Under Development ⏳
+
+[🔗 Deploy 💻](sp-labs-six.vercel.app)

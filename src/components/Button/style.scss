@@ -10,8 +10,10 @@
   font-weight: 500;
   line-height: 2.1rem;
   letter-spacing: 0.14rem;
+  transition: all 0.5s ease-in;
   
   &:hover {
     background: #45E6BF;
+    cursor: pointer;
   }
 }
