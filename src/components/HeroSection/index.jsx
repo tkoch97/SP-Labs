@@ -7,7 +7,7 @@ import ImgHeroBackground from '../../assets/img_hero_background.jpg';
 export function HeroSection() {
 
   return (
-    <>
+    <div className='container'>
       <div className='heroSection'>
         <img  className='heroSection__imgBackground' src={ImgHeroBackground} alt="três meninas em uma mesa felizes usando notebooks" />
 
@@ -32,6 +32,6 @@ export function HeroSection() {
         </div>
 
       </div>
-    </>
+    </div>
   )
 }

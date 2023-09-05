@@ -1,0 +1,29 @@
+.cases {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  .cases__texts {
+    color: #000;
+    padding: 8.0rem 3.0rem;
+    
+    .cases__title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 6.4rem;
+      letter-spacing: -0.048rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .cases__title__risk {
+      text-decoration-line: line-through;
+      // margin-left: 1.0rem;
+    }
+    .cases__title__italic {
+      font-style: italic;
+      // margin-left: 1.0rem;
+    }
+  }
+}
