@@ -1,19 +1,19 @@
 import './style.scss';
 import {HeroSection} from '../../components/HeroSection';
-import {Cases} from '../../components/Cases';
+import {CasesSection} from '../../components/CasesSection';
 
 function Home() {
 
   return (
-    <>
-    <div className='hero'>
-      <HeroSection/>
-    </div>
+    <div className='container'>
+      <div className='hero'>
+        <HeroSection/>
+      </div>
 
-    <div className='main'>
-      <Cases id='cases'/>
+      <div className='main'>
+        <CasesSection id='cases'/>
+      </div>
     </div>
-    </>
   )
 }
 
