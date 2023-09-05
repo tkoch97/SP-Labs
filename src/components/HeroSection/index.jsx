@@ -1,6 +1,6 @@
 import './style.scss';
-import {Button} from '../Button';
-import {Ancor} from '../Ancor';
+import { Button } from '../Button';
+import { Ancor } from '../Ancor';
 import WhiteLogo from '../../assets/white-logo.svg';
 import ImgHeroBackground from '../../assets/img_hero_background.jpg';
 
@@ -28,7 +28,7 @@ export function HeroSection() {
         </div>
 
         <div className='heroSection__button'>
-          <Button title='Inicie a sua jornada'/>
+          <Button className='buttonStructure' title='Inicie a sua jornada'/>
         </div>
 
       </div>

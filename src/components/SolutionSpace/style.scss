@@ -1,0 +1,22 @@
+.solutionStructure {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  .solutionStructure__title {
+    color: #000;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    letter-spacing: -0.036rem;
+  }
+
+  .solutionStructure__description {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Roboto;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3.0rem; /* 166.667% */
+    letter-spacing: -0.027rem;
+  }
+}

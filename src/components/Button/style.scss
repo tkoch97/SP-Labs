@@ -1,12 +1,18 @@
+//Variables
+$cinza-claro: #C4C4C4;
+$cinza-escuro: #343434;
+$verde-background: #5DFED6;
+$verde-hover: #45E6BF;
+
 .buttonStructure {
-  background: #5DFED6;
+  background: $verde-background;
   border: none;
   border-radius: 0.4rem;
   padding: 1.2rem 3.2rem;
   width: 100%;
   height: 4.5rem;
   text-transform: uppercase;
-  color: #343434;
+  color: $cinza-escuro;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2.1rem;
@@ -14,7 +20,41 @@
   transition: all 0.5s ease-in;
   
   &:hover {
-    background: #45E6BF;
+    background: $verde-hover;
     cursor: pointer;
+  }
+
+  &--small {
+    background: none;
+    border: 0.1rem solid $cinza-claro;
+    border-radius: 0.4rem;
+    padding: 0.8rem 2.4rem;
+    height: 4.0rem;
+    width: 15.8rem;
+    color: #343434;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 2.1rem;
+    transition: all 0.5s ease-in;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    svg {
+      font-size: 2.4rem;
+      transition: transform 0.5s ease-in-out;
+    }
+    &:hover {
+      border: 0.1rem solid $cinza-escuro;
+      cursor: pointer;
+
+      svg {
+        transform: translateX(0.3rem);
+      }
+    }
   }
 }

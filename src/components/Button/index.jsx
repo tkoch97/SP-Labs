@@ -2,11 +2,12 @@ import './style.scss';
 import PropTypes from 'prop-types';
 
 export function Button(props) {
-  const {title, ...rest} = props;
+  const {title, icon: Icon, ...rest} = props;
   return(
     <>
       <button className="buttonStructure" {...rest}>
         {title}
+        {Icon && <Icon />}
       </button>
     </>
   )
@@ -14,5 +15,5 @@ export function Button(props) {
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,
-  loading: PropTypes.bool
+  icon: PropTypes.any,
 };
