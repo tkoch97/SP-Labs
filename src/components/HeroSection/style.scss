@@ -16,10 +16,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4.2rem;
+    padding: 4.2rem 3.0rem;
     
+    @media(min-width:768px) {
+      margin: 0 5.0rem;
+    }
+
     .heroSection__logo {
       max-width: 6.3rem;
+
     }
     
     .heroSection__nav {
