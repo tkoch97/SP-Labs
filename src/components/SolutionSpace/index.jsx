@@ -4,28 +4,26 @@ import './style.scss'
 import PropTypes from 'prop-types';
 
 export function SolutionSpace(props) {
-  const {title, description} = props;
+  const {data} = props;
   return (
     <>
       <div className='solutionStructure'>
 
         <h1 className='solutionStructure__title'>
-          {title}
+          {data.title}
         </h1>
 
         <p className='solutionStructure__description'>
-          {description}
+          {data.description}
         </p>
 
         <Button className='buttonStructure--small' title='Saiba Mais' icon={FiArrowRight}/>
-        
+
       </div>
     </>
   )
 }
 
 SolutionSpace.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string,
-  link: PropTypes.any
+  data: PropTypes.any,
 };

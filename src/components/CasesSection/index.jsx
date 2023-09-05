@@ -1,5 +1,5 @@
 import './style.scss';
-import { SolutionSpace } from '../SolutionSpace';
+import { GenerateSolutionsSpace } from '../../functions/GenerateSolutionsSpace';
 
 export function CasesSection() {
 
@@ -28,8 +28,8 @@ export function CasesSection() {
         </div>
 
         <div className='casesSection__solutions'>
-          <SolutionSpace title='Solução 1' description='Repita comigo: Não vou esquecer de prestar atenção se está tudo alinhadinho. Não vou esquecer de prestar atenção se está tudo alinhado. Não vou esquecer de prestar atenção. Não esqueça do chat, ele está pouco visível na imagem acima mas no protótipo fica melhor.'/>
-        </div> 
+          <GenerateSolutionsSpace />
+        </div>
       </div>
     </div>
   )
