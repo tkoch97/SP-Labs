@@ -36,4 +36,19 @@
       letter-spacing: -0.027px;
     }
   }
+
+  .casesSection__solutions {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    @media(min-width:768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8.0rem 3.2rem;
+    }
+    @media(min-width:1024px) {
+      justify-content: space-between;
+    }
+  }
 }
