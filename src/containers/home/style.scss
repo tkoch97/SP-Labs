@@ -1,3 +1,6 @@
+$content-space-minWidth-768: 8.0rem 10.0rem;
+$content-space-mobile: 8.0rem 3.0rem;
+
 * {
   padding: 0;
   margin: 0;
@@ -12,10 +15,39 @@
   overflow-x: hidden;
 }
 
-.main {
-  padding: 8.0rem 3.0rem;
-
+.casesBlock {
+  background-color: #fff;
+  padding: $content-space-mobile;
+  
   @media(min-width:768px) {
-    padding: 8.0rem 10.0rem;
+    padding: $content-space-minWidth-768;
+  }
+}
+
+.videoBlock {
+  background: #F8F8F8;
+  padding: $content-space-mobile;
+  
+  @media(min-width:768px) {
+    padding: $content-space-minWidth-768;
+  }
+}
+
+.contactBlock {
+  padding: $content-space-mobile;
+  
+  @media(min-width:768px) {
+    padding: $content-space-minWidth-768;
+  }
+}
+
+.footer {
+  background-color: #fff;
+  border-top: 0.1rem solid #E2E2E2;
+  height: 50.0rem;
+  padding: $content-space-mobile;
+  
+  @media(min-width:768px) {
+    padding: $content-space-minWidth-768;
   }
 }

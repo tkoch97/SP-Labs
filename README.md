@@ -21,4 +21,4 @@ This project consists of a landing-page created for the technical challenge of S
 
 ## 💡 Access - Under Development ⏳
 
-[🔗 Deploy 💻](sp-labs-six.vercel.app)
+[🔗 Deploy 💻](https://sp-labs-six.vercel.app/)

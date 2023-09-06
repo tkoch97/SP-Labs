@@ -1,0 +1,18 @@
+.contactSection {
+  position: relative;
+
+  width: 100%;
+  height: 30.0rem;
+
+  .circle {
+    position: absolute;
+    z-index: -1;
+    bottom: -30.0rem;
+    left: -20.0rem;
+    width: 30.0rem;
+    height: 30.0rem;
+    background-color: #5DFED6;
+    border-radius: 50%;
+    box-shadow: 0 0 12.0rem 15.0rem #5DFED6;
+  }
+}
