@@ -1,11 +1,12 @@
 import './style.scss';
+import PropTypes from 'prop-types';
 import { Button } from '../Button';
 import { Ancor } from '../Ancor';
 import WhiteLogo from '../../assets/white-logo.svg';
 import ImgHeroBackground from '../../assets/img_hero_background.jpg';
 
-export function HeroSection() {
-
+export function HeroSection(props) {
+  const {link1, link2} = props
   return (
     <div className='container'>
       <div className='heroSection'>
@@ -16,8 +17,8 @@ export function HeroSection() {
           <img className='heroSection__logo' src={WhiteLogo} alt="logo SP Labs" />
 
           <nav className='heroSection__nav'>
-              <Ancor href='#cases' title="Cases" className='heroSection__item' />
-              <Ancor href='#contact' title="Contato" className='heroSection__item'/>
+              <Ancor href={link1} title="Cases" className='heroSection__item' />
+              <Ancor href={link2} title="Contato" className='heroSection__item'/>
           </nav>
 
         </div>
@@ -35,3 +36,8 @@ export function HeroSection() {
     </div>
   )
 }
+
+HeroSection.propTypes = {
+  link1: PropTypes.string,
+  link2: PropTypes.string,
+};
