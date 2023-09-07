@@ -1,3 +1,4 @@
+import { ContactForm } from '../ContactForm';
 import './style.scss';
 // import PropTypes from 'prop-types';
 // import { Button } from '../Button';
@@ -11,7 +12,7 @@ export function ContactSection() {
           Não fique parado, fale conosco
         </h1>
         <div className='contactSection__formSpace'>
-          
+          <ContactForm />
         </div>
         <div className='circle'/>
       </div>
