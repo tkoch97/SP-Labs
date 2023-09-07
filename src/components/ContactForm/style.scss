@@ -1,0 +1,11 @@
+.contactFormStructure {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  
+  .contactFormStructure__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
