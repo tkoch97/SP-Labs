@@ -7,8 +7,8 @@ export function Select(props) {
 
   return(
     <>
-      <select className='selectStructure' name={name}>
-        <option value="" className='selectStructure__placeholder' disabled selected hidden >{placeholder}</option>
+      <select className='selectStructure' name={name} defaultValue={placeholder}>
+        <option value={placeholder} className='selectStructure__placeholder' disabled hidden >{placeholder}</option>
         {values.map((value, index) => (
         <option key={index} value={value}>
           {value}
@@ -23,6 +23,6 @@ export function Select(props) {
 
 Select.propTypes = {
   name: PropTypes.string,
-  placeholder: PropTypes.string.isRequired,
-  values: PropTypes.arrayOf(PropTypes.string).isRequired
+  placeholder: PropTypes.string,
+  values: PropTypes.arrayOf(PropTypes.string)
 };

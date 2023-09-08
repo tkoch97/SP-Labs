@@ -17,8 +17,8 @@ export function HeroSection(props) {
           <img className='heroSection__logo' src={WhiteLogo} alt="logo SP Labs" />
 
           <nav className='heroSection__nav'>
-              <Ancor href={link1} title="Cases" className='heroSection__item' />
-              <Ancor href={link2} title="Contato" className='heroSection__item'/>
+              <Ancor href={link1} title="Cases" className='ancorStructure' />
+              <Ancor href={link2} title="Contato" className='ancorStructure'/>
           </nav>
 
         </div>
