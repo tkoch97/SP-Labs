@@ -1,3 +1,40 @@
+/* Animations*/
+
+@keyframes leftright {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .heroSection {
   position: relative;
   width: 100vw;
@@ -17,6 +54,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 4.2rem 3.0rem;
+
+    animation: topdown 1s;
+    animation-delay: 0.1s;
+    animation-timing-function: ease-in-out;
     
     @media(min-width:768px) {
       padding: 4.2rem 10.0rem;
@@ -49,6 +90,11 @@
       font-weight: 700;
       line-height: 7.2rem;
       letter-spacing: -0.084rem;
+
+      animation: leftright 1s;
+      animation-delay: 0.2s;
+      animation-fill-mode: backwards;
+      animation-timing-function: ease-in-out;
       
       @media(min-width:1280px) {
         font-size: 6.4rem;
@@ -75,11 +121,21 @@
       font-weight: 500;
       line-height: 3.0rem;
       letter-spacing: -0.027rem;
+
+      animation: leftright 1s;
+      animation-delay: 0.3s;
+      animation-fill-mode: backwards;
+      animation-timing-function: ease-in-out;
     }
   }
   
   .heroSection__button {
     padding: 2.0rem 3.0rem;
+
+    animation: appear 2s;
+    animation-delay: 0.8s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
 
     @media(min-width:768px) {
       width: 38.0rem;
