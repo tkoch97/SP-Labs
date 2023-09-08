@@ -3,6 +3,7 @@ import { Input } from "../Input";
 import { Select } from "../Select";
 import { TextArea } from "../TextArea";
 import { Button } from "../Button";
+import { ChecklistItem } from '../ChecklistItem';
 
 export function ContactForm() {
 
@@ -24,7 +25,10 @@ export function ContactForm() {
         </div>
 
         <div className="contactFormStructure__check">
-          
+          <ChecklistItem 
+          textOfCheckBox='Declaro que conheço a Política de Privacidade e 
+          autorizo a utilização das minhas informações pelo SP Labs'
+          />
         </div>
 
         <div className="contactFormStructure__button">
