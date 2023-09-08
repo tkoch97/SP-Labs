@@ -45,9 +45,9 @@
     }
     
     .heroSection__title {
-      font-size: 5.6rem;
+      font-size: clamp(3.6rem, 3.6rem + 1vw, 5.6rem);
       font-weight: 700;
-      line-height: 7.2rem; 
+      line-height: 7.2rem;
       letter-spacing: -0.084rem;
       
       @media(min-width:1280px) {
@@ -57,7 +57,7 @@
       
       span {
         font-family: 'Bodoni 72';
-        font-size: 73px;
+        font-size: clamp(5.3rem, 5.3rem + 1vw, 7.3rem);
         font-style: italic;
         font-weight: 400;
         line-height: 7.2rem;

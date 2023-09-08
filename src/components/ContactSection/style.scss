@@ -21,6 +21,10 @@
     padding: 3.2rem;
     border-radius: 0.8rem;
     box-shadow: 0rem 0rem 5.0rem 0rem rgba(0, 0, 0, 0.10);
+
+    @media(min-width:768px) {
+      max-width: 42.0rem;
+    }
   }
 
   .circle {
@@ -33,5 +37,10 @@
     background-color: #5DFED6;
     border-radius: 50%;
     box-shadow: 0 0 12.0rem 15.0rem #5DFED6;
+    
+    @media(min-width:768px) {
+      bottom: -55.0rem;
+      left: 10.0rem;
+    }
   }
 }
