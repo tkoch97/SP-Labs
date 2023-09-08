@@ -24,7 +24,6 @@ export function VideoSection() {
           <iframe
             src="https://www.youtube.com/embed/o2S4jtrhiq8" 
             title="Vídeo"
-            allowfullscreen
           />
         </dir>
       </div>

@@ -10,4 +10,19 @@
     text-decoration: underline;
     cursor: pointer;
   }
+  
+  &--dark {
+    color: #343434;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.024rem;
+    line-height: 2.4rem;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
 }

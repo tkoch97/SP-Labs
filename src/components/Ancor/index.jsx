@@ -2,10 +2,10 @@ import './style.scss';
 import PropTypes from 'prop-types';
 
 export function Ancor(props) {
-  const {title, href} = props;
+  const {title, href, ...rest} = props;
   return(
     <>
-      <a className="ancorStructure" href={href}>
+      <a className="ancorStructure" href={href} {...rest}>
         {title}
       </a>
     </>
@@ -13,6 +13,6 @@ export function Ancor(props) {
 }
 
 Ancor.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   href: PropTypes.string,
 };
