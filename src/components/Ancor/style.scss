@@ -1,17 +1,30 @@
 .ancorStructure {
   color: #fff;
+  position: relative;
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: -0.024rem;
   transition: all 0.5s ease-out;
-  
-  &:hover {
-    scale: (1.03);
-    text-decoration: underline;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    bottom: 0.1rem;
+    height: 0.1rem;
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+  &:hover::after {
     cursor: pointer;
+    opacity: 1;
   }
   
   &--dark {
+    position: relative;
     color: #343434;
     font-size: 1.6rem;
     font-weight: 400;
@@ -19,9 +32,20 @@
     line-height: 2.4rem;
     transition: all 0.5s ease-out;
 
-    &:hover {
-      text-decoration: underline;
-      cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #343434;
+      width: 100%;
+      left: 0;
+      bottom: 0.5rem;
+      height: 0.1rem;
+      opacity: 0;
+      transition: 0.5s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
     }
   }
 
