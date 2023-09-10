@@ -1,3 +1,15 @@
+@keyframes appear {
+  
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .checklistItemStructure {
   position: relative;
 
@@ -20,10 +32,6 @@
 
     &:hover {
       cursor: pointer;
-
-      &::before {
-        border: 0.1rem solid #45E6BF;
-      }
     }
 
     &::before {
@@ -42,5 +50,8 @@
     background-repeat: no-repeat;
     background-position: center;
     border: 0.1rem solid #45E6BF;
+    animation: appear 0.5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
   }
 }
