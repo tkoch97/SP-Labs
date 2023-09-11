@@ -31,8 +31,6 @@ try {
     description,
   });
 
-  console.log("Respostta da requisição =>", response.data)
-
   return response.data
 
 } catch (error) {

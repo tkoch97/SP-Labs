@@ -15,6 +15,62 @@
     line-height: 4.0rem;
     letter-spacing: -0.048rem;
   }
+
+  .contactSection__responseModal {
+    display: none;
+    opacity: 0;
+
+    &--open{
+      position: absolute;
+      display: grid;
+      opacity: 1;
+      place-content: center;
+      z-index: 1;
+      top: -40.0rem;
+      width: 100vw;
+      height: 200vh;
+      background: rgba(52, 52, 52, 0.50);
+      
+      @media(min-width:1024px) {
+        top: -60.0rem;
+      }
+
+    }
+
+    .contactSection__modalCard {
+      background-color: #fff;
+      box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 0.4rem;
+      padding: 1.6rem;
+      margin: 0 1.0rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+
+      .contactSection__modalCardClose {
+        border: 0;
+        background: none;
+        text-align: right;
+  
+        svg {
+          font-size: 2.4rem;
+        }
+        
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .contactSection__textResponse {
+        color: #000;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3.2rem;
+        letter-spacing: -0.036rem;
+      }
+    }
+  }
   
   .contactSection__formSpace {
     background: rgba(255, 255, 255, 0.80);
@@ -25,6 +81,19 @@
     @media(min-width:768px) {
       max-width: 42.0rem;
     }
+
+    .contactSection__formStructure {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      
+      .contactSection__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+      }
+    }
+
   }
 
   .circle {

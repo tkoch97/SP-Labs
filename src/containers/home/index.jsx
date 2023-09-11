@@ -5,11 +5,12 @@ import { VideoSection } from '../../components/VideoSection';
 import { ContactSection } from '../../components/ContactSection';
 import { FooterSection } from '../../components/FooterSection';
 
+
 function Home() {
+
 
   return (
     <div className='container'>
-
       <div className='hero'>
         <HeroSection link1='#cases' link2='#contact'/>
       </div>
@@ -27,7 +28,6 @@ function Home() {
         <div className='contactBlock' id='contact'>
           <ContactSection />
         </div>
-
       </div>
 
       <div className='footer'>
