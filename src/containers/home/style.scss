@@ -15,11 +15,14 @@ $content-space-mobile: 8.0rem 3.0rem;
   overflow-x: hidden;
 }
 
-// .container {
-//   position: relative;
-// }
+.container__chat{
+  position: fixed;
+  bottom: 3.2rem;
+  right: 3.2rem;
+  z-index: 1;
+}
 
-.casesBlock {
+.container__casesBlock {
   background-color: #fff;
   padding: $content-space-mobile;
   
@@ -28,7 +31,7 @@ $content-space-mobile: 8.0rem 3.0rem;
   }
 }
 
-.videoBlock {
+.container__videoBlock {
   background: #F8F8F8;
   padding: $content-space-mobile;
   
@@ -37,20 +40,16 @@ $content-space-mobile: 8.0rem 3.0rem;
   }
 }
 
-.contactBlock {
+.container__contactBlock {
   padding: $content-space-mobile;
   height: 90.0rem;
   
   @media(min-width:768px) {
     padding: $content-space-minWidth-768;
   }
-  .contactBlock__modal {
-    background-color: red;
-    width: 100vw;
-  }
 }
 
-.footer {
+.container__footer {
   background-color: #fff;
   border-top: 0.1rem solid #E2E2E2;
   padding: $content-space-mobile;
