@@ -1,0 +1,52 @@
+$color-darkGrey: #343434;
+$color-green: #5DFED6;
+$color-green-hover: #45E6BF;
+$color-white: #fff;
+
+.modalChatStructure {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  .modalChatStructure__chatPanel {
+    background-color: $color-white;
+    padding: 3.2rem 1.6rem 1.6rem;
+    border-radius: 3.2rem;
+    border: 0.1rem solid $color-darkGrey;
+
+    .modalChatStructure__header {
+      display: flex;
+      flex-direction: column;
+      background-color: $color-white;
+    }
+  }
+
+
+  .modalChatStructure__buttonSpace {
+    display: flex;
+    justify-content: flex-end;
+
+    .modalChatStructure__buttonChat {
+      background-color: $color-darkGrey;
+      padding: 1.54rem;
+      border-radius: 5.0rem;
+      transition: all 0.5s;
+      
+      svg {
+        font-size: 1.7rem;
+        color: #fff;
+      }
+      
+      &:hover {
+        background-color: $color-green;
+        cursor: pointer;
+        
+        svg {
+          color: #343434;
+        }
+      }
+      
+    }
+  }
+
+}

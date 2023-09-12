@@ -92,9 +92,9 @@ export function ContactSection() {
 
           </div>
           
+        <div className='circle'/>
         </div>
 
-        <div className='circle'/>
 
       </div>
 
