@@ -1,7 +1,27 @@
 $color-darkGrey: #343434;
+$color-lightGrey: #EFEFEF;
+$color-lightGrey2: #C4C4C4;
 $color-green: #5DFED6;
 $color-green-hover: #45E6BF;
 $color-white: #fff;
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-70deg); /* Rotação anti-horária de 60 graus */
+  }
+  70% {
+    transform: rotate(-40deg); /* Retorna 10 graus no sentido horário */
+  }
+  80% {
+    transform: rotate(-50deg); /* Retorna 10 graus no sentido horário */
+  }
+  100% {
+    transform: rotate(-45deg); /* Permanece em 10 graus no sentido horário */
+  }
+}
 
 .modalChatStructure {
   display: flex;
@@ -9,15 +29,117 @@ $color-white: #fff;
   gap: 1.6rem;
 
   .modalChatStructure__chatPanel {
-    background-color: $color-white;
-    padding: 3.2rem 1.6rem 1.6rem;
-    border-radius: 3.2rem;
-    border: 0.1rem solid $color-darkGrey;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+    
+    @media(min-width:768px) {
+      width: 35.4rem;
+    }
+    
+    &--opened {
+      background-color: $color-white;
+      padding: 3.2rem 1.6rem 1.6rem;
+      border-radius: 3.2rem;
+      border: 0.1rem solid $color-darkGrey;
+      min-width: 28.0rem;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+
+    }
 
     .modalChatStructure__header {
       display: flex;
       flex-direction: column;
+      gap: 1.6rem;
       background-color: $color-white;
+      padding-bottom: 1.6rem;
+      position: static;
+
+      .modalChatStructure__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .modalChatStructure__sizeButton {
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          padding: 0.4rem 0.8rem;
+          height: 2.3rem;
+          background: none;
+          border: 0.1rem solid $color-lightGrey;
+          border-radius: 0.8rem;
+          font-size: 1.2rem;
+          color: $color-darkGrey;
+
+          &:hover {
+            cursor: pointer;
+          }
+          
+          .modalChatStructure__sizeButton__text {
+            font-family: 'Inter';
+          }
+        }
+        
+      }
+
+      .modalChatStructure__salute {
+        font-family: 'Inter';
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 6.4rem;
+        font-size: 2.0rem;
+      }
+    }
+
+    .modalChatStructure__main {
+      border-top: 0.1rem solid $color-darkGrey;
+      width: 100%;
+      height: 20.0rem;
+      display: flex;
+      gap: 0.4rem;
+      justify-content: center;
+      align-items: center;
+      color: $color-lightGrey2;
+      font-size: 1.2rem;
+      font-family: 'Inter';
+      transition: all 0.3s ease-in;
+      // overflow-y:scroll;
+
+      &--expanded {
+        height: 40.0rem;
+      }
+    }
+
+    .modalChatStructure__input {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      .modalChatStructure__sendButton {
+        padding: 1.2rem 1.7rem;
+        border: none;
+        background: $color-green;
+        border-radius: 1.6rem;
+        height: 4.0rem;
+        
+        svg {
+          font-size: 2.0rem;
+          transition: all 0.5s;
+        }
+
+        &:hover {
+          background: $color-green-hover;
+
+          svg{
+            animation: rotateAnimation 0.4s linear forwards;
+          }
+        }
+      }
     }
   }
 
