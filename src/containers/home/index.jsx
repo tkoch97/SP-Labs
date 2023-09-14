@@ -9,7 +9,6 @@ import { ContactSection } from '../../components/ContactSection';
 
 function Home() {
 
-
   return (
     <div className='container'>
       
