@@ -1,5 +1,5 @@
 import './style.scss'
-import { Input } from '../Input';
+import { TextArea} from '../TextArea';
 import { TbSend } from 'react-icons/tb';
 import { BsChatLeft } from 'react-icons/bs';
 import { IoIosArrowDown } from 'react-icons/io';
@@ -26,7 +26,7 @@ export function ModalChat() {
     chatPanelRef.current = document.querySelector(".modalChatStructure__chatPanel");
     chatPanelMainRef.current = document.querySelector('.modalChatStructure__main');
     historicRef.current = document.querySelector('.modalChatStructure__historic');
-    inputRef.current = document.querySelector('.inputStructure--chat');
+    inputRef.current = document.querySelector('.textAreaStructure--chat');
     mainTextRef.current = document.querySelector('.modalChatStructure__mainText');
   }, []);
 
@@ -160,8 +160,8 @@ export function ModalChat() {
 
           <div className='modalChatStructure__input'>
 
-            <Input 
-              className='inputStructure--chat' 
+            <TextArea 
+              className='textAreaStructure--chat' 
               placeholder='Digite sua dúvida'
               onChange={e => setInputMessage(e.target.value)}
             />

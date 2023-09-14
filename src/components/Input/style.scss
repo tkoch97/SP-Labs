@@ -21,18 +21,4 @@ $font-color: #343434;
   &::placeholder{
     color: $font-color;
   }
-  
-  &--chat {
-    border-radius: 1.6rem;
-    padding: 1.2rem 1.6rem;
-    font-size: 1.2rem;
-    font-family: 'Inter';
-    border: 1px solid #C4C4C4;
-    color: #000;
-    width: 100%;
-    
-    &:focus {
-      outline: 0.1rem solid #45E6BF;
-    }
-  }
 }

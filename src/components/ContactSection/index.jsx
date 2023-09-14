@@ -28,7 +28,18 @@ export function ContactSection() {
     },
 
     close: function() {
-      handleModal.responseModal.classList.remove('contactSection__responseModal--open')
+      handleModal.responseModal.classList.remove('contactSection__responseModal--open');
+      const inputName = document.querySelector("#contactSection__name");
+      const inputEmail = document.querySelector("#contactSection__email");
+      const textAreaDescription = document.querySelector("#contactSection__description");
+      const selectSegment = document.querySelector("#contactSection__segment");
+      const checkBoxPoliticTerms = document.querySelector(".checklistItemStructure__checkbox");
+      
+      inputName.value = '', setName('');
+      inputEmail.value = '', setEmail('');
+      textAreaDescription.value = '', setDescription('');
+      selectSegment.value = 'Seu segmento', setSelectedSegment('');
+      checkBoxPoliticTerms.value = false, setIsChecked(false);
     },
   }
 
@@ -57,16 +68,16 @@ export function ContactSection() {
           <div className="contactSection__formStructure">
 
             <div className="contactSection__inputs">
-              <Input placeholder='Seu nome' type='text' onChange={e => setName(e.target.value)}/>
-              <Input placeholder='Seu e-mail' type='email'onChange={e => setEmail(e.target.value)}/>
+              <Input placeholder='Seu nome' type='text' id='contactSection__name' onChange={e => setName(e.target.value)}/>
+              <Input placeholder='Seu e-mail' type='email' id='contactSection__email' onChange={e => setEmail(e.target.value)}/>
             </div>
 
             <div className="contactSection__select">
-              <Select placeholder='Seu segmento' values={optionsInSelectSegments} onChange={(e) => setSelectedSegment(e.target.value)}/>
+              <Select placeholder='Seu segmento' values={optionsInSelectSegments} id='contactSection__segment' onChange={(e) => setSelectedSegment(e.target.value)}/>
             </div>
 
             <div className="contactSection__textArea">
-              <TextArea placeholder='Fale um pouco sobre o seu negócio' onChange={e => setDescription(e.target.value)}/>
+              <TextArea placeholder='Fale um pouco sobre o seu negócio' id="contactSection__description" onChange={e => setDescription(e.target.value)}/>
             </div>
 
             <div className="contactSection__check">

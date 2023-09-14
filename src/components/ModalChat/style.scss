@@ -120,13 +120,14 @@ $color-white: #fff;
 
     .modalChatStructure__main {
       border-top: 0.1rem solid $color-darkGrey;
+      border-radius: 0 0 1.6rem 1.6rem;
       display: flex;
       flex-direction: column;
       width: 100%;
       height: 20.0rem;
       transition: all 0.3s ease-in;
       position: relative;
-      overflow:auto;
+      overflow: auto;
       padding: 3.2rem 0;
       scrollbar-color: transparent;
       scrollbar-width: thin;
@@ -156,24 +157,32 @@ $color-white: #fff;
 
         .modalChatStructure__userMsgBox {
           align-self: flex-end;
-          padding: 0.8rem 1.6rem;
-          border: 0.1rem solid $color-lightGrey3;
-          border-radius: 1.6rem 1.6rem 0rem 1.6rem;
-          width: fit-content;
-
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+          align-items: flex-end;
+          height: fit-content;
+          max-width: fit-content;
+          
           .modalChatStructure__userMsgText {
+            padding: 0.8rem 1.6rem;
+            border: 0.1rem solid $color-lightGrey3;
+            border-radius: 1.6rem 1.6rem 0rem 1.6rem;
+            width: fit-content;
+            height: auto;
             color: $color-black;
             font-family: 'Inter';
             font-size: 1.2rem;
             font-style: normal;
             font-weight: 400;
+            word-break: break-word;
           }
         }
 
         .modalChatStructure__serverMsgBox {
-          align-self: flex-start;
           display: flex;
           gap: 0.4rem;
+          align-self: flex-start;
           justify-content: flex-start;
           align-items: start;
 
@@ -215,6 +224,7 @@ $color-white: #fff;
       display: flex;
       align-items: center;
       gap: 0.8rem;
+      padding-top: 1.0rem;
 
       .modalChatStructure__sendButton {
         padding: 1.2rem 1.7rem;
