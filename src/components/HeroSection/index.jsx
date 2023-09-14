@@ -29,7 +29,7 @@ export function HeroSection(props) {
         </div>
 
         <div className='heroSection__button'>
-          <Button className='buttonStructure' title='Inicie a sua jornada'/>
+          <Button className='buttonStructure' title='Inicie a sua jornada' externalLink='https://www.semprocesso.com.br/'/>
         </div>
 
       </div>
