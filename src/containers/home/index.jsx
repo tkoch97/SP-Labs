@@ -20,7 +20,7 @@ function Home() {
         <HeroSection link1='#cases' link2='#contact'/>
       </div>
 
-      <div className='container__main'>
+      <div className='container__main' id='main'>
 
         <div className='container__casesBlock' id='cases'>
           <CasesSection />

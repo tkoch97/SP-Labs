@@ -2,11 +2,11 @@ import './style.scss';
 import PropTypes from 'prop-types';
 
 export function Button(props) {
-  const {title, icon: Icon, externalLink, ...rest} = props;
+  const {title, icon: Icon, Link, ...rest} = props;
 
   const handleClick = () => {
-    if (externalLink) {
-      window.location.href = externalLink;
+    if (Link) {
+      window.location.href = Link;
     }
   };
 
@@ -28,6 +28,6 @@ export function Button(props) {
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,
-  externalLink: PropTypes.string,
+  Link: PropTypes.string,
   icon: PropTypes.any,
 };
