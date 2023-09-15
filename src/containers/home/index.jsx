@@ -31,8 +31,10 @@ function Home() {
         </div>
 
         <div className='container__contactBlock' id='contact'>
+          <div className='circle'/>
           <ContactSection />
         </div>
+
       </div>
 
       <div className='container__footer'>

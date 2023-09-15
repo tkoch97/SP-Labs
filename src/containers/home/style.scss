@@ -43,11 +43,38 @@ $content-space-mobile: 8.0rem 3.0rem;
 
 .container__contactBlock {
   padding: $content-space-mobile;
-  height: 90.0rem;
+  height: 88.0rem;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
   
   
   @media(min-width:768px) {
     padding: $content-space-minWidth-768;
+    height: 82.0rem;
+  }
+
+  .circle {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    top: 85.0rem;
+    left: -15.0rem;
+    width: 20.0rem;
+    height: 20.0rem;
+    background-color: #5DFED6;
+    border-radius: 50%;
+    box-shadow: 0 0 16.0rem 15.0rem #5DFED6;
+    
+    @media(min-width:768px) {
+      top: 70.0rem;
+      left: 10.0rem;
+    }
+
+    @media(min-width:1280px) {
+      top: 70.0rem;
+      left: 40.0rem;
+    }
   }
 }
 

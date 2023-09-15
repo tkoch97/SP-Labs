@@ -95,21 +95,4 @@
     }
 
   }
-
-  .circle {
-    position: absolute;
-    z-index: -1;
-    bottom: -60.0rem;
-    left: -20.0rem;
-    width: 20.0rem;
-    height: 20.0rem;
-    background-color: #5DFED6;
-    border-radius: 50%;
-    box-shadow: 0 0 16.0rem 15.0rem #5DFED6;
-    
-    @media(min-width:768px) {
-      bottom: -55.0rem;
-      left: 25.0rem;
-    }
-  }
 }
