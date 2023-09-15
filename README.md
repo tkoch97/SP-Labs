@@ -1,12 +1,13 @@
 # SP Labs 🧪⚖
 
-![Alt text](image-1.png)
+![preview](./public/preview.png)
 
 ## 📁 Project
 
 
 </p>
 This project consists of a landing-page created for the technical challenge of Sem Processo company.
+In it you will finder a chat dinamic window with the chatbot from SP Labs API.
 
 #
 
@@ -19,6 +20,6 @@ This project consists of a landing-page created for the technical challenge of S
 
 # 
 
-## 💡 Access - Under Development ⏳
+## 💡 Access ⬇
 
 [🔗 Deploy 💻](https://sp-labs-six.vercel.app/)
