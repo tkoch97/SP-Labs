@@ -177,6 +177,22 @@ $color-white: #fff;
         flex-direction: column;
         gap: 1.6rem;
 
+        .modalChatStructure__currentDateBox {
+          align-self: center;
+          padding: 0.4rem 0.8rem;
+          border-radius: 0.8rem;
+          border: 0.1rem solid $color-lightGrey;
+
+          .modalChatStructure__currentDateText {
+            text-align: center;
+            color: $color-darkGrey;
+            font-family: 'Inter';
+            font-size: 1.0rem;
+            font-weight: 400;
+          }
+
+        }
+
 
         .modalChatStructure__userMsgBox {
           align-self: flex-end;
