@@ -79,8 +79,6 @@ export function ModalChat() {
     const currentdate = new Date();
     const formattedCurrentDate = `${currentdate.getDate()}/${currentdate.getMonth() + 1}/${currentdate.getFullYear()}`;
 
-    console.log("vizualizando a data atual => ", formattedCurrentDate)
-
     // Criar elemento para mostrar a data atual do envio da mensagem
     const boxCurrentDate = document.createElement('div')
     boxCurrentDate.className = 'modalChatStructure__currentDateBox'
@@ -96,22 +94,14 @@ export function ModalChat() {
     for (let i = historicChildren.length -1; i>=0; i--) {
       const child = historicChildren[i];
 
-      console.log("Verificando conteúdo do child dentro do for =>", child)
-
       if(child.classList.contains('modalChatStructure__currentDateBox')){
-
-        console.log("entrei aqui no if do for")
 
         lastDateElement = child;
         break;
       }
     }
 
-    console.log("Verificando conteúdo do lastDateElement =>", lastDateElement.textContent)
-
     if(!lastDateElement || lastDateElement.textContent !== formattedCurrentDate) {
-
-      console.log("Entrei no if de verificação do lastDateElement")
 
       boxCurrentDate.appendChild(currentDateText)
       historicRef.current.appendChild(boxCurrentDate);
