@@ -57,14 +57,14 @@ export function ModalChat() {
     const lastChild = children[children.length -1];
 
     if(lastChild && lastChild.classList.contains('modalChatStructure__userMsgBox')) {
-      var boxMsg = document.createElement('div')
+      const boxMsg = document.createElement('div')
       boxMsg.className = 'modalChatStructure__serverMsgBox'
       
-      var serverAvatar = document.createElement('img')
+      const serverAvatar = document.createElement('img')
       serverAvatar.className = 'modalChatStructure__serverMsgAvatar'
       serverAvatar.src = chatAvatarMessage
       
-      var serverMsg = document.createElement('p')
+      const serverMsg = document.createElement('p')
       serverMsg.className = 'modalChatStructure__serverMsgText'
       serverMsg.innerHTML = serverResponse
       
@@ -74,16 +74,59 @@ export function ModalChat() {
     }
   }
 
-  const showUserMsg = () => {
-    var boxMsg = document.createElement('div')
-    boxMsg.className = 'modalChatStructure__userMsgBox'
+  const showCurrentDateAndUserMsg = () => {
 
-    var userMsg = document.createElement('p')
+    const currentdate = new Date();
+    const formattedCurrentDate = `${currentdate.getDate()}/${currentdate.getMonth() + 1}/${currentdate.getFullYear()}`;
+
+    console.log("vizualizando a data atual => ", formattedCurrentDate)
+
+    // Criar elemento para mostrar a data atual do envio da mensagem
+    const boxCurrentDate = document.createElement('div')
+    boxCurrentDate.className = 'modalChatStructure__currentDateBox'
+    const currentDateText = document.createElement('p')
+    currentDateText.className = 'modalChatStructure__currentDateText'
+    currentDateText.innerHTML = formattedCurrentDate
+
+    // Verificar se no histórico de mensagens existe um elemento currentDateText e 
+    // se o valor dele é diferente do formattedCurrentDate.
+    const historicChildren = historicRef.current.children;
+    let lastDateElement = null;
+
+    for (let i = historicChildren.length -1; i>=0; i--) {
+      const child = historicChildren[i];
+
+      console.log("Verificando conteúdo do child dentro do for =>", child)
+
+      if(child.classList.contains('modalChatStructure__currentDateBox')){
+
+        console.log("entrei aqui no if do for")
+
+        lastDateElement = child;
+        break;
+      }
+    }
+
+    console.log("Verificando conteúdo do lastDateElement =>", lastDateElement.textContent)
+
+    if(!lastDateElement || lastDateElement.textContent !== formattedCurrentDate) {
+
+      console.log("Entrei no if de verificação do lastDateElement")
+
+      boxCurrentDate.appendChild(currentDateText)
+      historicRef.current.appendChild(boxCurrentDate);
+    }
+
+
+    const boxMsg = document.createElement('div')
+    boxMsg.className = 'modalChatStructure__userMsgBox'
+    const userMsg = document.createElement('p')
     userMsg.className = 'modalChatStructure__userMsgText'
     userMsg.innerHTML = inputMessage
 
     boxMsg.appendChild(userMsg)
     historicRef.current.appendChild(boxMsg);
+
     inputRef.current.value = '';
     setInputMessage(inputRef.current.value)
     updateMainTextVisibility();
@@ -111,7 +154,7 @@ export function ModalChat() {
 
   const handleSendMsgButton = async () => {
     const response = await HandleSendMsgByChat({ inputMessage });
-    showUserMsg();
+    showCurrentDateAndUserMsg();
     setServerResponse(response);
   }
 
@@ -119,7 +162,7 @@ export function ModalChat() {
     if (e.key === 'Enter' && e.shiftKey === false) {
       e.preventDefault();
       const response = await HandleSendMsgByChat({ inputMessage });
-      showUserMsg();
+      showCurrentDateAndUserMsg();
       setServerResponse(response);
     }
   };
