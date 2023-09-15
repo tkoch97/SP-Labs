@@ -107,9 +107,24 @@ export function ModalChat() {
       } else {
         chatPanelMainRef.current.classList.remove('modalChatStructure__main--expanded');
       }
+  }
+
+  const handleSendMsgButton = async () => {
+    const response = await HandleSendMsgByChat({ inputMessage });
+    showUserMsg();
+    setServerResponse(response);
+  }
+
+  const handleSendMsgEnter = async (e) => {
+    if (e.key === 'Enter' && e.shiftKey === false) {
+      e.preventDefault();
+      const response = await HandleSendMsgByChat({ inputMessage });
+      showUserMsg();
+      setServerResponse(response);
     }
+  };
 
-
+  
   return(
     <>
     <div className='modalChatStructure'>
@@ -165,12 +180,10 @@ export function ModalChat() {
               className='textAreaStructure--chat' 
               placeholder='Digite sua dúvida'
               onChange={e => setInputMessage(e.target.value)}
+              onKeyDown={handleSendMsgEnter}
             />
-            <button className='modalChatStructure__sendButton' onClick={ async () => {
-              const response = await HandleSendMsgByChat({inputMessage});
-              showUserMsg();
-              setServerResponse(response);
-              }}>
+            
+            <button className='modalChatStructure__sendButton' onClick={handleSendMsgButton}>
               <TbSend/>
             </button>
 
