@@ -1,22 +1,22 @@
 // import { ContactForm } from '../ContactForm';
+import './style.scss';
+import { useState } from 'react';
 import { Input } from "../Input";
+import { Button } from "../Button";
 import { Select } from "../Select";
 import { TextArea } from "../TextArea";
-import { Button } from "../Button";
-import { ChecklistItem } from '../ChecklistItem';
 import { IoMdClose } from 'react-icons/io'
-import { useState } from 'react';
+import { ChecklistItem } from '../ChecklistItem';
 import { HandleContactFormSubmission } from '../../functions/HandleContactFormSubmission'
-import './style.scss';
 
 export function ContactSection() {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [selectedSegment, setSelectedSegment] = useState('');
-  const [description, setDescription] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  const [description, setDescription] = useState('');
   const [responseForm, setResponseForm] = useState('');
+  const [selectedSegment, setSelectedSegment] = useState('');
 
   const optionsInSelectSegments = ['Educação', 'Alimentação', 'Comércio']
 
