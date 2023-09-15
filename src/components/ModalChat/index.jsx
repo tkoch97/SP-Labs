@@ -32,13 +32,14 @@ export function ModalChat() {
 
   useEffect(() => {
     if(serverResponse !== '') {
-      showServerMsg();
-
-      if(chatPanelMainRef.current) {
-        chatPanelMainRef.current.scrollTop = chatPanelMainRef.current.scrollHeight;
-      }
+      setTimeout(() => {
+        showServerMsg();
+  
+        if(chatPanelMainRef.current) {
+          chatPanelMainRef.current.scrollTop = chatPanelMainRef.current.scrollHeight;
+        }
+      }, 1000)
     }
-
   }, [serverResponse]);
 
 
