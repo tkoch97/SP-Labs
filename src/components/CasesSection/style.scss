@@ -45,11 +45,11 @@
     @media(min-width:768px) {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 8.0rem 3.2rem;
     }
     @media(min-width:1024px) {
       display: grid;
       grid-template-columns: 50% 50%;
+      gap: 8.0rem 4.0rem;
     }
   }
 }
